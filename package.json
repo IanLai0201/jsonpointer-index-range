@@ -1,0 +1,60 @@
+{
+  "name": "jsonpointer-index-range",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "Ian Lai",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "packageManager": "pnpm@8.6.8",
+  "volta": {
+    "node": "18.16.0"
+  },
+  "engines": {
+    "node": "^18 || >=20",
+    "pnpm": ">=8"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "preinstall": "npx only-allow pnpm",
+    "build": "rollup -c",
+    "test": "vitest --passWithNoTests --watch false",
+    "lint": "eslint . --fix --ignore-path .gitignore",
+    "format": "prettier --write ./"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/json-pointer": "^1.0.34",
+    "@types/node": "^18.16.1",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "esbuild": "^0.19.11",
+    "eslint": "^8.39.0",
+    "eslint-plugin-import": "^2.25.2",
+    "husky": "^8.0.0",
+    "json-pointer": "^0.6.2",
+    "lint-staged": "^15.2.0",
+    "prettier": "^2.8.8",
+    "rollup": "^4.9.5",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-esbuild": "^6.1.0",
+    "typescript": "^5.3.3",
+    "vitest": "^0.34.6"
+  },
+  "lint-staged": [
+    "prettier --write --ignore-unknown",
+    "eslint --fix"
+  ]
+}

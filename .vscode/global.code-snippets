@@ -1,0 +1,23 @@
+{
+  "util template": {
+    "scope": "typescript",
+    "prefix": "!util define",
+    "body": ["export function ${TM_FILENAME_BASE/([^.]+).*/${1:/camelcase}/g}($1) {", "  $2", "}"]
+  },
+
+  "util unit test template": {
+    "scope": "typescript",
+    "prefix": "!test util define",
+    "body": [
+      "import { describe, it, expect } from 'vitest';",
+      "",
+      "import { ${TM_FILENAME_BASE/([^.]+).*/${1:/camelcase}/g} } from '.';",
+      "",
+      "describe('${TM_FILENAME_BASE/([^.]+).*/${1:/camelcase}/g}', () => {",
+      "  it('$1', () => {",
+      "",
+      "  });",
+      "})"
+    ]
+  }
+}

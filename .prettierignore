@@ -1,0 +1,23 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+*.local
+.DS_STore
+.husky
+coverage
+dist
+dist-ssr
+node_modules
+public
+
+*.min.*
+LICENSE
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

@@ -1,0 +1,24 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit",
+    "source.organizeImports": "never"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+
+  // cSpell
+  "cSpell.allowCompoundWords": true,
+
+  // vitest
+  "vitest.commandLine": "vitest",
+
+  // TypeScript Version
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "testing.automaticallyOpenPeekView": "never"
+}
